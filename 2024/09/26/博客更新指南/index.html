@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title> Cealivanus&#39; Universe</title>
+      <title>博客更新指南 |  Cealivanus&#39; Universe</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -64,24 +64,34 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-博客更新方式"
+  id="post-博客更新指南"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
   data-scroll-reveal
 >
   <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  博客更新指南
+</h1>
+ 
+
+      
+    </header>
      
     <div class="article-meta">
-      <a href="/2024/09/25/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%96%B9%E5%BC%8F/" class="article-date">
-  <time datetime="2024-09-25T13:46:09.561Z" itemprop="datePublished">2024-09-25</time>
+      <a href="/2024/09/26/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/" class="article-date">
+  <time datetime="2024-09-26T09:30:21.000Z" itemprop="datePublished">2024-09-26</time>
 </a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">213</span>
+            <span class="post-count">231</span>
         </span>
     </span>
 
@@ -108,10 +118,13 @@
   <h2 id="博客更新方式"><a href="#博客更新方式" class="headerlink" title="博客更新方式"></a>博客更新方式</h2><ol>
 <li><p>修改博客根目录的  <strong>.yml</strong>  文件可以更新网页</p>
 </li>
-<li><p>在blog(根目录)&#x2F;source&#x2F;_posts 文件夹中添加 <strong>.md</strong>文档可以上传博客</p>
-<p>可以直接用<em><strong>Typora</strong></em>编辑，也可以先用<strong>txt</strong>文本写好，把后缀改为md</p>
+<li><p>博客根目录右键打开<strong>支持中文输入</strong>的<em>终端</em>，键入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;(文章标题)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>可以在blog&#x2F;source&#x2F;_posts文件夹里生成.md文本，在此处编辑更新文章</p>
 </li>
 <li><p>博客根目录右键打开 &#x3D;&#x3D;Open Git Bash here&#x3D;&#x3D;</p>
+<p>或者<strong>支持中文输入</strong>的<em>终端</em></p>
 </li>
 <li><p>输入 </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate # 申城网站信息</span><br><span class="line">hexo server # 开始网站服务</span><br></pre></td></tr></table></figure>
@@ -121,20 +134,8 @@
 <li><p>浏览器输入 <u>localhost:4000</u> 预览博客更新状态</p>
 </li>
 <li><p>保留原Git Bash 窗口 （若关掉4000也会停止访问）</p>
-<p>博客根目录右键打开 &#x3D;&#x3D;Open Git Bash here&#x3D;&#x3D; ，键入</p>
-<pre><code> hexo clean # 清除缓存
- hexo generate # 生成网站
- hexo deploy # 部署至远程网络
- 
- # 简写
- hexo cl
- hexo g
- hexo d  
- 
- # 简简写 
- hexo cl 
- hexo g -d  # hexo d -g
-</code></pre>
+<p>博客根目录右键打开 &#x3D;&#x3D;Open Git Bash here&#x3D;&#x3D; 或终端，键入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 清除缓存</span><br><span class="line">hexo generate # 生成网站</span><br><span class="line">hexo deploy # 部署至远程网络</span><br><span class="line"></span><br><span class="line"># 简写</span><br><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo d  </span><br><span class="line"></span><br><span class="line"># 简简写 </span><br><span class="line">hexo cl </span><br><span class="line">hexo g -d  # hexo d -g</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>等待片刻，刷新网页，更新成功</p>
 </li>
@@ -203,7 +204,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/09/25/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%96%B9%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/09/26/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -213,15 +214,6 @@
 
    
   <nav class="article-nav">
-    
-      <a href="/2024/09/26/second-article/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            second article
-          
-        </div>
-      </a>
     
     
       <a href="/2024/09/25/first-article/" class="article-nav-link">

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-CN">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>2024年ACM新生训练赛（D-F） |  Cealivanus&#39; Hut</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    </head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      <canvas class="fireworks"></canvas>
+      <style>
+        .fireworks {
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: 99999;
+          pointer-events: none;
+        }
+      </style>
+      
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-2024年ACM新生训练赛（D-F）"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  2024年ACM新生训练赛（D-F）
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/09/28/2024%E5%B9%B4ACM%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%EF%BC%88D-F%EF%BC%89/" class="article-date">
+  <time datetime="2024-09-28T14:53:56.000Z" itemprop="datePublished">2024-09-28</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">1.3k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">6 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>比赛地址：校园网访问<a target="_blank" rel="noopener" href="http://10.50.40.9/contest/66e150342093ab5e05a56a8e">Contest Detail - XAUT OJ</a></p>
+<p>本大二老蒟蒻的第一篇题解，如有错误或表述不当之处请联系QQ3488643420，请多多包涵！</p>
+<p>本次校内新生赛，俺老黄瓜刷绿漆，与各级各院高手同台竞技，不胜荣幸！</p>
+<p>前六题基本上是语法题，难度不大，没用到什么复杂的算法。</p>
+<p>最后一个多小时对着G坐牢太过难受，还是要多多提升自己，不然就要被后浪狠狠拍在沙滩上了T^T。</p>
+<span id="more"></span>
+
+<h2 id="D"><a href="#D" class="headerlink" title="D"></a>D</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fast                          \</span></span><br><span class="line"><span class="meta">    std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="meta">    std::cin.tie(nullptr);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line">ll l,r,ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    fast;</span><br><span class="line">    ans=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;l&gt;&gt;r;</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=<span class="number">2</span>) l=<span class="number">3</span>;</span><br><span class="line">    <span class="keyword">if</span>(l%<span class="number">2</span>==<span class="number">0</span>) l--;</span><br><span class="line">    <span class="keyword">if</span>(r%<span class="number">2</span>==<span class="number">0</span>) r++;</span><br><span class="line">    ans=(r-l)/<span class="number">2</span>;</span><br><span class="line">    <span class="comment">//cout&lt;&lt;ans;</span></span><br><span class="line">    <span class="comment">//if(l&lt;=2) ans--;</span></span><br><span class="line">    <span class="keyword">if</span>(r&lt;=<span class="number">2</span>) ans=<span class="number">0</span>;</span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>本题与哥德巴赫猜想有关，任何大于2的偶数都能够写成两个质数相加的形式，虽然尚未被证明，但也没被证伪，我们可以运用该猜想。</p>
+<p>要注意特判一下范围是否包括2，l、r都要特判。（本蒟蒻没判断r，WA了好几发QAQ)</p>
+<h2 id="E"><a href="#E" class="headerlink" title="E"></a>E</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fast                          \</span></span><br><span class="line"><span class="meta">    std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="meta">    std::cin.tie(nullptr);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">6</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    n -= <span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">while</span> (!(x % <span class="number">3</span> &amp;&amp; (n - x) % <span class="number">3</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        x++;</span><br><span class="line">        <span class="keyword">if</span> (x == n - x||n-x==<span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            cout &lt;&lt; <span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;YES\n&quot;</span></span><br><span class="line">         &lt;&lt; <span class="number">1</span> &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; x &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; n - x &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    fast;</span><br><span class="line">    <span class="type">int</span> _ = <span class="number">1</span>;</span><br><span class="line">    cin &gt;&gt; _;</span><br><span class="line">    <span class="keyword">while</span> (_--)</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意三个数不能相同</p>
+<h2 id="F"><a href="#F" class="headerlink" title="F"></a>F</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fast                          \</span></span><br><span class="line"><span class="meta">    std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="meta">    std::cin.tie(nullptr);</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n,k;</span><br><span class="line">string s;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string t;</span><br><span class="line">    cin &gt;&gt; t;</span><br><span class="line">    <span class="type">int</span> len = t.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">if</span>(len&gt;s.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        cout&lt;&lt;<span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (s[i] != t[i % len])</span><br><span class="line">            &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;NO\n&quot;</span>;</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;YES\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    fast;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line">    cin&gt;&gt;s;</span><br><span class="line">    <span class="keyword">while</span> (k--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>无回溯的子串匹配，用不到KMP</p>
+<p>注意特判一下t的长度大于s的情况。</p>
+<h2 id="G"><a href="#G" class="headerlink" title="G"></a>G</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//=========================================================</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// #include &lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="comment">// #define fast                          \</span></span><br><span class="line"><span class="comment">//     std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="comment">//     std::cin.tie(nullptr);</span></span><br><span class="line"><span class="comment">// using namespace std;</span></span><br><span class="line"><span class="comment">// typedef long long ll;</span></span><br><span class="line"><span class="comment">// const int N = 2e5 + 10;</span></span><br><span class="line"><span class="comment">// ll n,k;</span></span><br><span class="line"><span class="comment">// ll x[N],a[N],b[N];</span></span><br><span class="line"><span class="comment">// int main()</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     fast;</span></span><br><span class="line"><span class="comment">//     cin&gt;&gt;n&gt;&gt;k;</span></span><br><span class="line"><span class="comment">//     for(int i=1;i&lt;=n;i++) cin&gt;&gt;x[i];</span></span><br><span class="line"><span class="comment">//     for(int i=1;i&lt;=n;i++) cin&gt;&gt;b[i];</span></span><br><span class="line"><span class="comment">//     //k%=(n-1);</span></span><br><span class="line"><span class="comment">//     while(k--)</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         for(int i=1;i&lt;=n;i++) a[i]=b[i];</span></span><br><span class="line"><span class="comment">//         for(int i=1;i&lt;=n;i++) b[i]=a[x[i]];</span></span><br><span class="line"><span class="comment">//         // for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         //     cout &lt;&lt; b[i] &lt;&lt; &#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//         // cout&lt;&lt;&#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++) cout&lt;&lt;b[i]&lt;&lt;&#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//     return 0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//=========================================================</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// #include &lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="comment">// #define fast                          \</span></span><br><span class="line"><span class="comment">//     std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="comment">//     std::cin.tie(nullptr);</span></span><br><span class="line"><span class="comment">// using namespace std;</span></span><br><span class="line"><span class="comment">// typedef long long ll;</span></span><br><span class="line"><span class="comment">// const int N = 2e5 + 10;</span></span><br><span class="line"><span class="comment">// ll n,k;</span></span><br><span class="line"><span class="comment">// ll x[N],a[N],b[N];</span></span><br><span class="line"><span class="comment">// int main()</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     fast;</span></span><br><span class="line"><span class="comment">//     cin&gt;&gt;n&gt;&gt;k;</span></span><br><span class="line"><span class="comment">//     for(int i=1;i&lt;=n;i++) cin&gt;&gt;x[i];</span></span><br><span class="line"><span class="comment">//     for(int i=1;i&lt;=n;i++) cin&gt;&gt;b[i];</span></span><br><span class="line"><span class="comment">//     while(k--)</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         for(int i=1;i&lt;=n;i++) x[i]=x[x[i]];</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     for(int i=1;i&lt;=n;i++) cout&lt;&lt;b[x[i]]&lt;&lt;&#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//     return 0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// #include &lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="comment">// #define fast                          \</span></span><br><span class="line"><span class="comment">//     std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="comment">//     std::cin.tie(nullptr);</span></span><br><span class="line"><span class="comment">// using namespace std;</span></span><br><span class="line"><span class="comment">// typedef long long ll;</span></span><br><span class="line"><span class="comment">// const int N = 2e5 + 10;</span></span><br><span class="line"><span class="comment">// int n;</span></span><br><span class="line"><span class="comment">// ll k;</span></span><br><span class="line"><span class="comment">// int x[N],y[N],z[N],b[N];</span></span><br><span class="line"><span class="comment">// int main()</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     fast;</span></span><br><span class="line"><span class="comment">//     cin &gt;&gt; n &gt;&gt; k;</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         cin &gt;&gt; x[i],z[i]=x[i];</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         cin &gt;&gt; b[i];</span></span><br><span class="line"><span class="comment">//     k %= (n - 1);</span></span><br><span class="line"><span class="comment">//     for(int i=1;i&lt;k;i++)</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         for(int j=1;j&lt;=n;j++)</span></span><br><span class="line"><span class="comment">//         &#123;</span></span><br><span class="line"><span class="comment">//             //if(j&gt;1) z[j]=y[j];</span></span><br><span class="line"><span class="comment">//             y[j]=x[x[j]];</span></span><br><span class="line"><span class="comment">//         &#125;</span></span><br><span class="line"><span class="comment">//         // for (int j = 1; j &lt;= n; j++)</span></span><br><span class="line"><span class="comment">//         //     cout &lt;&lt; b[x[i][j]] &lt;&lt; &#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//         // cout&lt;&lt;&#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         cout &lt;&lt; b[y[i]] &lt;&lt; &#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//     return 0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//=========================================================</span></span><br><span class="line"><span class="comment">// #include &lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="comment">// #define fast                          \</span></span><br><span class="line"><span class="comment">//     std::ios::sync_with_stdio(false); \</span></span><br><span class="line"><span class="comment">//     std::cin.tie(nullptr);</span></span><br><span class="line"><span class="comment">// using namespace std;</span></span><br><span class="line"><span class="comment">// typedef long long ll;</span></span><br><span class="line"><span class="comment">// const int N = 5 + 10;</span></span><br><span class="line"><span class="comment">// int n;</span></span><br><span class="line"><span class="comment">// ll k;</span></span><br><span class="line"><span class="comment">// int x[N], y[N],t[N], b[N];</span></span><br><span class="line"><span class="comment">// int main()</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//     fast;</span></span><br><span class="line"><span class="comment">//     cin &gt;&gt; n &gt;&gt; k;</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         cin &gt;&gt; x[i],y[i]=x[i];</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         cin &gt;&gt; b[i];</span></span><br><span class="line"><span class="comment">//     k %= (n - 1);</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt; k; i++)</span></span><br><span class="line"><span class="comment">//     &#123;</span></span><br><span class="line"><span class="comment">//         for (int j = 1; j &lt;= n; j++)</span></span><br><span class="line"><span class="comment">//         &#123;</span></span><br><span class="line"><span class="comment">//             t[j]=y[j];</span></span><br><span class="line"><span class="comment">//             y[j]=x[x[j]];</span></span><br><span class="line"><span class="comment">//             x[j]=t[j];</span></span><br><span class="line"><span class="comment">//         &#125;</span></span><br><span class="line"><span class="comment">//         // for (int j = 1; j &lt;= n; j++)</span></span><br><span class="line"><span class="comment">//         //     cout &lt;&lt; b[x[i][j]] &lt;&lt; &#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//         // cout&lt;&lt;&#x27;\n&#x27;;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//     for (int i = 1; i &lt;= n; i++)</span></span><br><span class="line"><span class="comment">//         cout &lt;&lt; b[y[i]] &lt;&lt; &#x27; &#x27;;</span></span><br><span class="line"><span class="comment">//     return 0;</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>史山也贴出来吧，毕竟也做了一个多小时（虽然是无用功）</p>
+<p>做出来俩种方法，一种超时间限制，一种超空间限制。</p>
+<p>应该继续考虑优化存储方式，减少空间占用。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2024/09/28/2024%E5%B9%B4ACM%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%EF%BC%88D-F%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2024/09/26/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">博客更新指南</div>
+      </a>
+    
+  </nav>
+
+  
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2024
+        <i class="ri-heart-fill heart_icon"></i> Cealivanus Kwan
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Cealivanus&#39; Hut"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E7%AE%97%E7%AB%9E/">算竞</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%A5%E5%B8%B8/">日常</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2024/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+
+<script src="/js/clickBoom1.js"></script>
+ 
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>

@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/10/14/最短路径/"/>
+    <link rel="canonical" href="http://example.com/2024/12/10/xautctf2024-newcup-part-1-writeup/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,16 +23,16 @@
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="最短路径">
-<meta property="og:url" content="http://example.com/2024/10/14/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/index.html">
+<meta property="og:title" content="XAUTCTF2024 NewCup Part_1  WriteUp">
+<meta property="og:url" content="http://example.com/2024/12/10/XAUTCTF2024-NewCup-Part-1-WriteUp/index.html">
 <meta property="og:site_name" content="Cealivanus&#39; Hut">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
-<meta property="article:published_time" content="2024-10-14T14:06:59.000Z">
-<meta property="article:modified_time" content="2024-12-10T14:01:43.620Z">
+<meta property="article:published_time" content="2024-12-10T14:12:43.000Z">
+<meta property="article:modified_time" content="2024-12-10T14:14:38.078Z">
 <meta property="article:author" content="Cealivanus Kwan">
-<meta property="article:tag" content="算法">
+<meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
     
@@ -46,7 +46,7 @@
     
     <title>
         
-            最短路径 | Cealivanus&#39; Hut
+            XAUTCTF2024 NewCup Part_1  WriteUp | Cealivanus&#39; Hut
         
     </title>
 
@@ -431,7 +431,7 @@
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">最短路径</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">XAUTCTF2024 NewCup Part_1  WriteUp</h1>
 			</div>
 			
 		</div>
@@ -452,35 +452,19 @@
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-10-14 22:06:59</span>
-        <span class="mobile">2024-10-14 22:06:59</span>
+        <span class="desktop">2024-12-10 22:12:43</span>
+        <span class="mobile">2024-12-10 22:12:43</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-10 22:01:43</span>
-            <span class="mobile">2024-12-10 22:01:43</span>
+            <span class="desktop">2024-12-10 22:14:38</span>
+            <span class="mobile">2024-12-10 22:14:38</span>
             <span class="hover-info">更新</span>
         </span>
     
 
-    
-        <span class="article-categories article-meta-item">
-            <i class="fa-regular fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
     
     
         <span class="article-tags article-meta-item">
@@ -488,7 +472,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                        <a href="/tags/CTF/">CTF</a>&nbsp;
                     </li>
                 
             </ul>
@@ -514,53 +498,122 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p><img  
+			<h1 id="XAUTCTF2024-NewCup-Part-1-WriteUp"><a href="#XAUTCTF2024-NewCup-Part-1-WriteUp" class="headerlink" title="XAUTCTF2024 NewCup Part_1  WriteUp"></a>XAUTCTF2024 NewCup Part_1  WriteUp</h1><h2 id="HelloCTFer"><a href="#HelloCTFer" class="headerlink" title="HelloCTFer"></a>HelloCTFer</h2><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241002114518002.png"
-                      alt="image-20241002114518002"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004100548955.png"
+                      alt="image-20241004100548955"
                 ></p>
-<span id="more"></span>
-
-<p>n:点数</p>
-<p>m:边数</p>
-<p>稠密图：</p>
-<p>相对来说线比点多</p>
-<p>显然易见，稠密图的路径太多了，所以就用点来找，也就是抓重点；</p>
-<p>稀疏图：</p>
-<p>相对来说点比线多</p>
-<p>点很多，但是连线不是很多的时候，对应的就是稀疏图，稀疏图的路径不多，所以按照连接路径找最短路，这个过程运用优先队列，能确保每一次查找保留到更新到队列里的都是最小的，同时还解决了两个点多条路选择最短路的问题；</p>
-<h2 id="Dijkstra算法求解最短路"><a href="#Dijkstra算法求解最短路" class="headerlink" title="Dijkstra算法求解最短路"></a>Dijkstra算法求解最短路</h2><p>基于贪心算法</p>
-<p>朴素Dijkstra算法</p>
-<ol>
-<li><p>dis[i]&#x3D;INF dis[1]&#x3D;0</p>
-<p>2.(s : 当前已确定最短距离的)</p>
-</li>
-</ol>
-<p>For i:0~n  (循环n次可得n个结点的最短距离)</p>
-<pre><code> t &lt;- 不在s 中的距离最近的点
- 
- s &lt;- t
- 
- 用t更新其他点的距离
-</code></pre>
-<p>​	 更新方式： 判断l-&gt;x与l-&gt;t-&gt;x</p>
-<pre><code>     dis[x] &gt; dis[t] + w
-</code></pre>
-<p>例题链接：<a class="link"   target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/851/" >849. Dijkstra求最短路 I - AcWing题库<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>XAUTCTF{Welcome_to_XAUTCTF2024_NewCup!!!}</p>
+<h2 id="XAUTcraft"><a href="#XAUTcraft" class="headerlink" title="XAUTcraft"></a>XAUTcraft</h2><p>我一般玩的是PCL启动器</p>
+<p>将XAUTCTF_World导入.minecraft\versions\1.20.1-Forge_47.0.3-OptiFine_I5_pre5\saves</p>
+<p>MINECRAFT，启动！</p>
+<p>即可看到XAUTCTF_World存档</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241002112209960.png"
-                      alt="image-20241002112209960"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004110727233.png"
+                      alt="image-20241004110727233"
                 ></p>
-<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">510</span>;</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> g[N][N], dist[N];</span><br><span class="line"><span class="type">bool</span> st[N];<span class="comment">//表示第t个点是否确定路径</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dijkstra</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist,<span class="number">0x3f</span>,<span class="built_in">sizeof</span>(dist));<span class="comment">//初始化正无穷</span></span><br><span class="line">    dist[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> t=<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            <span class="keyword">if</span>(!st[j]&amp;&amp;(t==<span class="number">-1</span>||dist[t]&gt;dist[j])) <span class="comment">//t不是最短的 更新值</span></span><br><span class="line">                t=j;</span><br><span class="line">        st[t]=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++)</span><br><span class="line">            dist[j] = <span class="built_in">min</span>(dist[j],dist[t]+g[t][j]); <span class="comment">//更新直达j和借由t到j的较短路</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(dist[n]==<span class="number">0x3f3f3f3f</span>) <span class="keyword">return</span> <span class="number">-1</span>;<span class="comment">//没有路径更新，无联通</span></span><br><span class="line">    <span class="keyword">return</span> dist[n];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="built_in">memset</span>(g,<span class="number">0x3f</span>,<span class="built_in">sizeof</span>(g));</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> a,b,c;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        g[a][b]=<span class="built_in">min</span>(g[a][b],c);<span class="comment">//防止c超出0x3f3f3f3f范围</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> t=<span class="built_in">dijkstra</span>();</span><br><span class="line">    cout&lt;&lt;t&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>打开就一直往下掉</p>
+<p>![屏幕截图 2024-10-04 110216](D:\Users\G15\Pictures\Screenshots\屏幕截图 2024-10-04 110216.png)</p>
+<p>发现第一次下落之前面前有大字，遂更新存档重新导入，找准时机截下下图</p>
+<p>![屏幕截图 2024-10-04 105900](D:\Users\G15\Pictures\Screenshots\屏幕截图 2024-10-04 105900.png)</p>
+<p>XAUTCTF{BR_S_MINECRAFT}</p>
+<h2 id="小海报"><a href="#小海报" class="headerlink" title="小海报"></a>小海报</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004103531656.png"
+                      alt="image-20241004103531656"
+                ></p>
+<p>本以为是高深的图片隐写术，第二天早上才看到图片下面有一串神秘小密码</p>
+<p>574531634f6d655f74305f5841555443544621</p>
+<p>Base解码未果</p>
+<p>分析代码，数字多字母少，符合Base16特征，但是Base16的字母均为大写</p>
+<p>修改密码：574531634F6D655F74305F5841555443544621</p>
+<p>Base16解码得：WE1cOme_t0_XAUTCTF!</p>
+<p>XAUTCTF{WE1cOme_t0_XAUTCTF!}</p>
+<h2 id="学号"><a href="#学号" class="headerlink" title="学号"></a>学号</h2><p>早先了解Peng✌名曰李鹏程</p>
+<p>根据此：</p>
+<p>【腾讯文档】2024年国庆节假期学生去向统计表<br><a class="link"   target="_blank" rel="noopener" href="https://docs.qq.com/sheet/DQ3hoUlFoaFd1QURq?tab=BB08J2" >https://docs.qq.com/sheet/DQ3hoUlFoaFd1QURq?tab=BB08J2<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004100945488.png"
+                      alt="image-20241004100945488"
+                ></p>
+<p>XAUTCTF{3231423008}</p>
+<h2 id="What’s-Base"><a href="#What’s-Base" class="headerlink" title="What’s Base?"></a>What’s Base?</h2><p>原密文</p>
+<p>4B3543554D565357495648464B55544F4F4D594532564352475248554B5753464A565554414D324F495646454D5443554D4E3456433653424F5249564B5653464A35425443524B50495241544954544B4B4A43564532535A474249585551525A</p>
+<p>base16解密<br>K5CUMVSWIVHFKUTOOMYE2VCRGRHUKWSFJVUTAM2OIVFEMTCUMN4VC6SBORIVKVSFJ5BTCRKPIRATITTKKJCVE2SZGBIXUQRZ</p>
+<p>base32解密<br>WEFVVENURns0MTQ4OEZEMi03NEJFLTcyQzAtQUVEOC1EODA4NjRERjY0QzB9</p>
+<p>base64解密<br>XAUTCTF{41488FD2-74BE-72C0-AED8-D80864DF64C0}</p>
+<h2 id="Where-are-you"><a href="#Where-are-you" class="headerlink" title="Where are you?"></a>Where are you?</h2><p>根据图寻图片，为九号楼五楼，又由教室窗户朝北靠向校门一侧，推理得教室号码为偶数，数较小</p>
+<p>XAUTCTF{9-504}</p>
+<h2 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h2><p>运行脚本attachment更新，如下，不知其缘由</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004233217587.png"
+                      alt="image-20241004233217587"
+                ></p>
+<p>在网络上找MD5解密网站均败下阵来</p>
+<p>编写如下代码</p>
+<div class="code-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> hashlib <span class="keyword">import</span> md5</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">double_md5</span>(<span class="params">char: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="comment"># 对单个字符进行两次 MD5 哈希处理</span></span><br><span class="line">    <span class="keyword">return</span> md5(md5(char.encode()).hexdigest().encode()).hexdigest()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">find_original_char</span>(<span class="params">double_hashed_value: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="comment"># 遍历所有可能的 ASCII 可打印字符</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">32</span>, <span class="number">127</span>):  <span class="comment"># ASCII 可打印字符范围</span></span><br><span class="line">        char = <span class="built_in">chr</span>(i)</span><br><span class="line">        <span class="keyword">if</span> double_md5(char) == double_hashed_value:</span><br><span class="line">            <span class="keyword">return</span> char</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt_file</span>(<span class="params">file_path: <span class="built_in">str</span></span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">        lines = file.readlines()</span><br><span class="line"></span><br><span class="line">    original_chars = []</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> lines:</span><br><span class="line">        double_hashed_value = line.strip()  <span class="comment"># 去除行尾换行符</span></span><br><span class="line">        original_char = find_original_char(double_hashed_value)</span><br><span class="line">        <span class="keyword">if</span> original_char:</span><br><span class="line">            original_chars.append(original_char)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            original_chars.append(<span class="string">&#x27;?&#x27;</span>)  <span class="comment"># 如果没有找到匹配的字符，用问号表示</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 输出解密后的字符串</span></span><br><span class="line">    decrypted_string = <span class="string">&#x27;&#x27;</span>.join(original_chars)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;解密后的字符串是: <span class="subst">&#123;decrypted_string&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用提供的文件路径调用函数</span></span><br><span class="line">decrypt_file(<span class="string">&#x27;attachment.txt&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="堆优化版Dijkstra"><a href="#堆优化版Dijkstra" class="headerlink" title="堆优化版Dijkstra"></a>堆优化版Dijkstra</h2><p>堆：手写堆或者优先队列——使用优先队列</p>
-<p>例题链接：<a class="link"   target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/852/" >850. Dijkstra求最短路 II - AcWing题库<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; PII;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span><span class="number">+10</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> n,m,idx;</span><br><span class="line"><span class="type">int</span> h[N],</span><br><span class="line">    w[N],<span class="comment">//权重</span></span><br><span class="line">    e[N],ne[N];</span><br><span class="line"><span class="type">int</span> dist[N];</span><br><span class="line"><span class="type">bool</span> st[N];<span class="comment">//表示第t个点是否确定路径</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span> c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx]=b,w[idx]=c,ne[idx]=h[a],h[a]=idx++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dijkstra</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(dist,<span class="number">0x3f</span>,<span class="built_in">sizeof</span>(dist));<span class="comment">//初始化正无穷</span></span><br><span class="line">    dist[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    priority_queue&lt;PII,vector&lt;PII&gt;,greater&lt;PII&gt;&gt; heap;</span><br><span class="line">    heap.<span class="built_in">push</span>(&#123;<span class="number">0</span>,<span class="number">1</span>&#125;);</span><br><span class="line">    <span class="keyword">while</span>(heap.<span class="built_in">size</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">auto</span> t=heap.<span class="built_in">top</span>();</span><br><span class="line">        heap.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="type">int</span> ver=t.second,distance=t.first;</span><br><span class="line">        <span class="keyword">if</span>(st[ver]) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=h[ver];i!=<span class="number">-1</span>;i=ne[i])</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> j=e[i];</span><br><span class="line">            <span class="keyword">if</span>(dist[j]&gt;distance+w[i])</span><br><span class="line">            &#123;</span><br><span class="line">                dist[j]=distance+w[i];</span><br><span class="line">                heap.<span class="built_in">push</span>(&#123;dist[j],j&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(dist[n]==<span class="number">0x3f3f3f3f</span>) <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">return</span> dist[n];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="built_in">memset</span>(h,<span class="number">-1</span>,<span class="built_in">sizeof</span>(h));</span><br><span class="line">    <span class="keyword">while</span>(m--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> a,b,c;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        <span class="built_in">add</span>(a,b,c);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> t=<span class="built_in">dijkstra</span>();</span><br><span class="line">    cout&lt;&lt;t&lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>运行代码：</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004233527669.png"
+                      alt="image-20241004233527669"
+                ></p>
+<p>XAUTCTF{1614d17d-01b4-8b9f-ceca-52562069202a}</p>
+<h2 id="Base64"><a href="#Base64" class="headerlink" title="Base64?"></a>Base64?</h2><p>运行base64.py</p>
+<div class="code-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">from</span> flag <span class="keyword">import</span> flag</span><br><span class="line"></span><br><span class="line">standard_alphabet = <span class="string">b&#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#x27;</span></span><br><span class="line">custom_alphabet =   <span class="string">b&#x27;JXaYOjSNTet1dDrHsVlc0m5EknG7Ko6qibhFBuyzQUwxWCp4ZLf23gAvMR8PI9+/&#x27;</span></span><br><span class="line">encode_trans = <span class="built_in">bytes</span>.maketrans(standard_alphabet, custom_alphabet)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encode</span>(<span class="params"><span class="built_in">input</span></span>):</span><br><span class="line">   <span class="keyword">return</span> base64.b64encode(<span class="built_in">input</span>).translate(encode_trans)</span><br><span class="line"></span><br><span class="line">enstr = encode(flag.encode())</span><br><span class="line"><span class="built_in">print</span>(enstr.decode())</span><br></pre></td></tr></table></figure></div>
 
-<p>待更新……</p>
+<p>得到：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D09w75gHVYX56BDaV2mp6mnFcAnBsmTZVcehkFXXdOjOcFd9</span><br></pre></td></tr></table></figure></div>
+
+<p>编写Base64解码脚本</p>
+<div class="code-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">standard_alphabet = <span class="string">b&#x27;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&#x27;</span></span><br><span class="line">custom_alphabet =   <span class="string">b&#x27;JXaYOjSNTet1dDrHsVlc0m5EknG7Ko6qibhFBuyzQUwxWCp4ZLf23gAvMR8PI9+/&#x27;</span></span><br><span class="line"></span><br><span class="line">decode_trans = <span class="built_in">bytes</span>.maketrans(custom_alphabet, standard_alphabet)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decode</span>(<span class="params"><span class="built_in">input</span></span>):</span><br><span class="line">    input_bytes = <span class="built_in">input</span>.encode()</span><br><span class="line">    <span class="comment"># 首先将自定义Base64编码转回标准Base64编码</span></span><br><span class="line">    standard_b64 = input_bytes.translate(decode_trans)</span><br><span class="line">    <span class="comment"># 然后使用标准库解码</span></span><br><span class="line">    <span class="keyword">return</span> base64.b64decode(standard_b64).decode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line"></span><br><span class="line">encoded_string = <span class="string">&quot;D09w75gHVYX56BDaV2mp6mnFcAnBsmTZVcehkFXXdOjOcFd9&quot;</span></span><br><span class="line"></span><br><span class="line">decoded_flag = decode(encoded_string)</span><br><span class="line"><span class="built_in">print</span>(decoded_flag)</span><br></pre></td></tr></table></figure></div>
+
+<p>将D09w75gHVYX56BDaV2mp6mnFcAnBsmTZVcehkFXXdOjOcFd9赋给encoded_string，运行得</p>
+<p>5OjmmOD0VzCBG5nyVcOfdAR0E2bb0A0ADN3&#x3D;</p>
+<p>再将5OjmmOD0VzCBG5nyVcOfdAR0E2bb0A0ADN3&#x3D;赋给encoded_string，运行得</p>
+<p>XAUTCTF{diffE123nT_8aSe64}</p>
+<h2 id="Get-d"><a href="#Get-d" class="headerlink" title="Get d!!!"></a>Get d!!!</h2><div class="code-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">exgcd</span>(<span class="params">m, n, x=<span class="number">0</span>, y=<span class="number">0</span></span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        x = <span class="number">1</span></span><br><span class="line">        y = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> (m, x, y)</span><br><span class="line">    a1 = b = <span class="number">1</span></span><br><span class="line">    a = b1 = <span class="number">0</span></span><br><span class="line">    c = m</span><br><span class="line">    d = n</span><br><span class="line">    q = <span class="built_in">int</span>(c / d)</span><br><span class="line">    r = c % d</span><br><span class="line">    <span class="keyword">while</span> r:</span><br><span class="line">        c = d</span><br><span class="line">        d = r</span><br><span class="line">        t = a1</span><br><span class="line">        a1 = a</span><br><span class="line">        a = t - q * a</span><br><span class="line">        t = b1</span><br><span class="line">        b1 = b</span><br><span class="line">        b = t - q * b</span><br><span class="line">        q = <span class="built_in">int</span>(c / d)</span><br><span class="line">        r = c % d</span><br><span class="line">    x = a</span><br><span class="line">    y = b</span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">quick_algorithm</span>(<span class="params">a, b, c</span>):</span><br><span class="line">    a = a % c</span><br><span class="line">    ans = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> b != <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">if</span> b &amp; <span class="number">1</span>:</span><br><span class="line">            ans = (ans * a) % c</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span></span><br><span class="line">        a = (a * a) % c</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设p，q是下面的数字</span></span><br><span class="line">p = <span class="number">2147483647</span></span><br><span class="line">q = <span class="number">524287</span></span><br><span class="line"></span><br><span class="line">n = p * q</span><br><span class="line"></span><br><span class="line">phi_n = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 因为e一般是65537，但是也可以指定符合要求的e值</span></span><br><span class="line">e = <span class="number">17</span></span><br><span class="line">d = <span class="number">0</span></span><br><span class="line">d = exgcd(e, phi_n)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>运行代码，输出：132458307156089</p>
+<p>XAYUTCTF{132458307156089}</p>
+<h2 id="Do-you-know-rsa’s-key"><a href="#Do-you-know-rsa’s-key" class="headerlink" title="Do you know rsa’s key?"></a>Do you know rsa’s key?</h2><div class="code-container" data-rel="Py"><figure class="iseeu highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">from</span> Crypto.PublicKey <span class="keyword">import</span> RSA</span><br><span class="line"><span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> PKCS1_v1_5</span><br><span class="line"></span><br><span class="line">data = <span class="string">&quot;kZXHviP8yVEdvuZG7nDfEKXfKMW2E0h0f0oSTyEwNX5Ju67ETr+zKqP9w2swTlF17qi2zP14hJY3/jOBNmBCt64LR6N8OPLHV1DqIVlnbub9danFLaupNNvVofZRTIeGMnI+RJ9BdvEfHjimSsZMm0nRPeQ3I2IA/tMxA/EakMvh7pGPcN+fnbITBWWI9ukWqqxofsaOlfECU8QkG+P1svVz8pi8xpIaN+3Dn0Y7khG1ybPckavnSmY1UO9rIbS98Y3ujQfQnkvCCbKJ06L7eWxX8mhBXFd2169e1BnQKLHres5MqWg1LHMlDIRFy+23RWU13PW8tfGaVe1NwftGoA==&quot;</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;rsa_private_key.pem&quot;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> fp:</span><br><span class="line">    <span class="comment"># 读取私钥</span></span><br><span class="line">    pri_key = fp.read()</span><br><span class="line">    <span class="comment"># 加载私钥对象</span></span><br><span class="line">    rsa_key = RSA.importKey(pri_key)</span><br><span class="line">    <span class="comment"># 构建解密器</span></span><br><span class="line">    rsa = PKCS1_v1_5.new(rsa_key)</span><br><span class="line">    <span class="comment"># 进行数据解密,解密前需要现将base64进行解码;</span></span><br><span class="line">    result = rsa.decrypt(base64.b64decode(data), <span class="literal">None</span>)</span><br><span class="line">    <span class="built_in">print</span>(result.decode(<span class="string">&quot;utf-8&quot;</span>))</span><br></pre></td></tr></table></figure></div>
+
+<p>data值为encrypt_text.txt文本</p>
+<p>运行得</p>
+<p>XAUTCTF{rSA_iS_wiD3LY_usED}</p>
+<h2 id="WEB-Starter"><a href="#WEB-Starter" class="headerlink" title="WEB_Starter"></a>WEB_Starter</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004102315599.png"
+                      alt="image-20241004102315599"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241004102341282.png"
+                      alt="image-20241004102341282"
+                ></p>
+<p>WEFVVENURnsyYTMwZDkyMy00MTY2LTQ1MmYtYWU3NS04ODhmMGZkMWE5NzN9Cg&#x3D;&#x3D;</p>
+<p>Base64解码得</p>
+<p>XAUTCTF{2a30d923-4166-452f-ae75-888f0fd1a973}</p>
+<h2 id="To-Hack-AI"><a href="#To-Hack-AI" class="headerlink" title="To Hack AI"></a>To Hack AI</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="C:\Users\G15\AppData\Roaming\Typora\typora-user-images\image-20241011182404416.png"
+                      alt="image-20241011182404416"
+                ></p>
+<p>emmm</p>
+<p>XAUTCTF{Y0v_hAVe_SuccesZFv1LY_tRain3d_thE_ai}</p>
 
 		</div>
 
@@ -568,18 +621,18 @@
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> 最短路径</li>
+        <li><strong>标题:</strong> XAUTCTF2024 NewCup Part_1  WriteUp</li>
         <li><strong>作者:</strong> Cealivanus Kwan</li>
         <li><strong>创建于
-                :</strong> 2024-10-14 22:06:59</li>
+                :</strong> 2024-12-10 22:12:43</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-12-10 22:01:43
+                    :</strong> 2024-12-10 22:14:38
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2024/10/14/最短路径/
+            <strong>链接:</strong> https://redefine.ohevan.com/2024/12/10/XAUTCTF2024-NewCup-Part-1-WriteUp/
         </li>
         <li>
             <strong>
@@ -601,7 +654,7 @@
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/%E7%AE%97%E6%B3%95/">#算法</a>&nbsp;
+				<a href="/tags/CTF/">#CTF</a>&nbsp;
 			</li>
 			
 		</ul>
@@ -613,12 +666,12 @@
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
 			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2024/10/14/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+				<a class="prev" rel="prev" href="/2024/12/10/Vue3-%E5%88%9D%E8%AF%86/">
 					<span class="left arrow-icon flex justify-center items-center">
 						<i class="fa-solid fa-chevron-left"></i>
 					</span>
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">并查集</span>
+						<span class="post-nav-title-item">Vue3 初识</span>
 						<span class="post-nav-item">上一篇</span>
 					</span>
 				</a>
@@ -626,9 +679,9 @@
 			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2024/09/28/2024%E5%B9%B4ACM%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%EF%BC%88D-F%EF%BC%89/">
+				<a class="next" rel="next" href="/2024/12/09/Redefine%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E7%9B%AE%E5%BD%95/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">2024年ACM新生训练赛（D-F）</span>
+						<span class="post-nav-title-item">Redefine博客主题目录</span>
 						<span class="post-nav-item">下一篇</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -649,8 +702,8 @@
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
-		<div class="page-title">最短路径</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3%E6%9C%80%E7%9F%AD%E8%B7%AF"><span class="nav-text">Dijkstra算法求解最短路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A0%86%E4%BC%98%E5%8C%96%E7%89%88Dijkstra"><span class="nav-text">堆优化版Dijkstra</span></a></li></ol>
+		<div class="page-title">XAUTCTF2024 NewCup Part_1  WriteUp</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#XAUTCTF2024-NewCup-Part-1-WriteUp"><span class="nav-text">XAUTCTF2024 NewCup Part_1  WriteUp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HelloCTFer"><span class="nav-text">HelloCTFer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XAUTcraft"><span class="nav-text">XAUTcraft</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%B5%B7%E6%8A%A5"><span class="nav-text">小海报</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%A6%E5%8F%B7"><span class="nav-text">学号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What%E2%80%99s-Base"><span class="nav-text">What’s Base?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Where-are-you"><span class="nav-text">Where are you?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MD5"><span class="nav-text">MD5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Base64"><span class="nav-text">Base64?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-d"><span class="nav-text">Get d!!!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Do-you-know-rsa%E2%80%99s-key"><span class="nav-text">Do you know rsa’s key?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WEB-Starter"><span class="nav-text">WEB_Starter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-Hack-AI"><span class="nav-text">To Hack AI</span></a></li></ol></li></ol>
 
 	</div>
 </div>

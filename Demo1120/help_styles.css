@@ -1,0 +1,195 @@
+/* 基本样式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #280ed2;
+}
+
+/* 头部样式 */
+header {
+    background-color: #13004c;
+    box-shadow: 0 2px 4px rgba(69, 71, 78, 0.093);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #4992e7;
+}
+
+/* 导航栏样式 */
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #4992e7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #fdfdfd;
+}
+
+/* 主要内容样式 */
+main {
+    padding-top: 80px;
+}
+
+.hero {
+    background-image: url('image/background3.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(1, 45, 67);
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+#help-content {
+    padding: 50px 5%;
+}
+
+.help-container {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.help-sidebar {
+    flex: 0 0 250px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px 0 0 8px;
+}
+
+.help-sidebar h3 {
+    margin-top: 0;
+    color: #4a90e2;
+}
+
+.help-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.help-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.help-sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.help-sidebar ul li a:hover {
+    color: #4a90e2;
+}
+
+.help-main {
+    flex: 1;
+    padding: 20px;
+}
+
+.help-main section {
+    margin-bottom: 40px;
+}
+
+.help-main h3 {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+}
+
+.help-main ul,
+.help-main ol {
+    padding-left: 20px;
+}
+
+.help-main dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.help-main dd {
+    margin-left: 20px;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .help-container {
+        flex-direction: column;
+    }
+
+    .help-sidebar {
+        flex: none;
+        border-radius: 8px 8px 0 0;
+    }
+
+    .help-main {
+        padding: 20px;
+    }
+}

@@ -513,15 +513,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -590,15 +590,15 @@
 </div>
                 <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">14</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">12</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">15</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -613,6 +613,204 @@
 			<div class="main-content">
 				<div class="home-content-container">
     <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/19/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/">
+                            基于PyCharm+Django+MySql搭建简易Web网站
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            注：本篇为B站视频 https://www.bilibili.com/video/BV1wT4y1j71A/ 的操作笔记以及个人配置过程中的遇到的问题集锦，如有侵权请联系qq3488643420删除
+Django框架下载pycharm 页面快捷键 alt + F12，打开terminal集成终端框
+键入
+1pip install -i https://pypi.douban.com/simp...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Dec 19 2024 21:14:55 GMT+0800">
+                
+                    2024-12-19
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/MySql/">MySql</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/Django/">Django</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/python/">python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/19/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/">阅读全文<span class="seo-reader-text">基于PyCharm+Django+MySql搭建简易Web网站</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/19/MySql%E8%87%AA%E7%94%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                            MySql自用基本操作
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            cmd命令操作(其实有些操作可以在Nacicat中执行，更加简便)
+进入数据库：
+1mysql -u root -p
+
+回车提醒你输入设定的root用户密码，密码正确成功进入
+数据库操作查看数据库：
+1show databases;
+
+不要忘记后面加“;”
+创建数据库：
+1create database [dbname];
+
+选择当前数据库：
+1use [dbname];
+
+查看当前选择了哪...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Thu Dec 19 2024 20:55:12 GMT+0800">
+                
+                    2024-12-19
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/MySql/">MySql</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/19/MySql%E8%87%AA%E7%94%A8%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">阅读全文<span class="seo-reader-text">MySql自用基本操作</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+
+                
+                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/18/C%E8%AF%AD%E8%A8%80%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/">
+                            C语言文件读写操作
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content markdown-body">
+                        
+                            
+                            我简直是一个铸币，做数据结构课设又双叒叕忘记文件操作怎么写了，开个帖复习一下。
+这里就列举一下自己常用的文件操作。
+创建文件指针：
+1FILE* fp = fopen(&quot;[filename.txt]&quot;, &quot;r&quot;);
+
+别忘记文件操作完成之后释放文件指针
+1fclose(fp);
+
+“r”表示只读，”w”可以对文件进行覆写。
+12345if (fp ==...
+                        
+                    </div>
+
+                    <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Dec 18 2024 20:00:06 GMT+0800">
+                
+                    2024-12-18
+                
+            </span>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%96%87%E4%BB%B6/">文件</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/C-C/">C/C++</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2024/12/18/C%E8%AF%AD%E8%A8%80%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/">阅读全文<span class="seo-reader-text">C语言文件读写操作</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+                </div>
+            </li>
         
             <li class="home-article-item">
 
@@ -654,7 +852,12 @@
                     
                         <li>
                             
-                            <a href="/tags/html-css/">html css</a>&nbsp;
+                            <a href="/tags/html/">html</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/css/">css</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -786,7 +989,7 @@ MINECRAFT...
                     
                         <li>
                             
-                            <a href="/tags/CTF/">CTF</a>&nbsp;
+                            <a href="/tags/%E9%A2%98%E8%A7%A3/">题解</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -816,7 +1019,8 @@ MINECRAFT...
 
                     <div class="home-article-content markdown-body">
                         
-                            <p>排序算法模板：</p>
+                            
+                            插入排序简单插入排序 InsertSort1234567891011121314151617181920212223242526272829303132333435363738394041#include &lt;bits/stdc++.h&gt;#define fast                          \    std::ios::sync_with_stdio(fals...
                         
                     </div>
 
@@ -837,7 +1041,7 @@ MINECRAFT...
                     
                         <li>
                             
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                            <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -892,7 +1096,7 @@ MINECRAFT...
                     
                         <li>
                             
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                            <a href="/tags/stl/">stl</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -945,7 +1149,7 @@ MINECRAFT...
                     
                         <li>
                             
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                            <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">并查集</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1001,7 +1205,7 @@ MINECRAFT...
                     
                         <li>
                             
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
+                            <a href="/tags/%E5%9B%BE/">图</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -1010,172 +1214,6 @@ MINECRAFT...
     </div>
 
     <a href="/2024/10/14/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84/">阅读全文<span class="seo-reader-text">最短路径</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/28/2024%E5%B9%B4ACM%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%EF%BC%88D-F%EF%BC%89/">
-                            2024年ACM新生训练赛（D-F）
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <p>比赛地址：校园网访问<a class="link"   target="_blank" rel="noopener" href="http://10.50.40.9/contest/66e150342093ab5e05a56a8e" >Contest Detail - XAUT OJ<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
-<p>本大二老蒟蒻的第一篇题解，如有错误或表述不当之处请联系QQ3488643420，请多多包涵！</p>
-<p>本次校内新生赛，俺老黄瓜刷绿漆，与各级各院高手同台竞技，不胜荣幸！</p>
-<p>前六题基本上是语法题，难度不大，没用到什么复杂的算法。</p>
-<p>最后一个多小时对着G坐牢太过难受，还是要多多提升自己，不然就要被后浪狠狠拍在沙滩上了T^T。</p>
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Sep 28 2024 22:53:56 GMT+0800">
-                
-                    2024-09-28
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/28/2024%E5%B9%B4ACM%E6%96%B0%E7%94%9F%E8%AE%AD%E7%BB%83%E8%B5%9B%EF%BC%88D-F%EF%BC%89/">阅读全文<span class="seo-reader-text">2024年ACM新生训练赛（D-F）</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/26/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/">
-                            博客更新指南
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            <h2 id="博客更新方式"><a href="#博客更新方式" class="headerlink" title="博客更新方式"></a>博客更新方式</h2><ol>
-<li><p>修改博客根目录的  <strong>.yml</strong>  文件可以更新网页</p>
-</li>
-<li><p>博客根目录右键打开<strong>支持中文输入</strong>的<em>终端</em>，键入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;(文章标题)&quot;</span><br></pre></td></tr></table></figure>
-
-<p>可以在blog&#x2F;source&#x2F;_posts文件夹里生成.md文本，在此处编辑更新文章</p>
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Sep 26 2024 17:30:21 GMT+0800">
-                
-                    2024-09-26
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/blog/">blog</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/26/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/">阅读全文<span class="seo-reader-text">博客更新指南</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/09/25/first-article/">
-                            first article
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            #这是我在博客上发表的第一篇文章~
-#浅浅记录一下
-
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Sep 25 2024 20:18:17 GMT+0800">
-                
-                    2024-09-25
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%85%B6%E4%BB%96/">其他</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/09/25/first-article/">阅读全文<span class="seo-reader-text">first article</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
                 </div>
@@ -1211,7 +1249,7 @@ MINECRAFT...
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 12 篇文章
+                        共撰写了 15 篇文章
                     </span>
                     
                 </p>

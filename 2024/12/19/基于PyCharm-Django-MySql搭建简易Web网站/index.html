@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-12-19T13:14:55.000Z">
-<meta property="article:modified_time" content="2024-12-19T14:35:46.257Z">
+<meta property="article:modified_time" content="2024-12-20T14:31:43.274Z">
 <meta property="article:author" content="Cealivanus Kwan">
 <meta property="article:tag" content="MySql">
 <meta property="article:tag" content="Django">
@@ -461,8 +461,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-19 22:35:46</span>
-            <span class="mobile">2024-12-19 22:35:46</span>
+            <span class="desktop">2024-12-20 22:31:43</span>
+            <span class="mobile">2024-12-20 22:31:43</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -524,8 +524,7 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p>注：本篇为B站视频 <a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wT4y1j71A/" >https://www.bilibili.com/video/BV1wT4y1j71A/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 的操作笔记以及个人配置过程中的遇到的问题集锦，如有侵权请联系qq3488643420删除</p>
-<h4 id="Django框架下载"><a href="#Django框架下载" class="headerlink" title="Django框架下载"></a>Django框架下载</h4><p><strong>pycharm 页面快捷键 alt + F12，打开terminal集成终端框</strong></p>
+			<h4 id="Django框架下载"><a href="#Django框架下载" class="headerlink" title="Django框架下载"></a>Django框架下载</h4><p><strong>pycharm 页面快捷键 alt + F12，打开terminal集成终端框</strong></p>
 <p>键入</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.douban.com/simple/ django</span><br></pre></td></tr></table></figure></div>
 
@@ -545,11 +544,26 @@
 
 <p>开始执行main.py，启动项目</p>
 <p>如图所示启动成功：</p>
-<p>![1](X:images&#x2F;屏幕截图 2024-12-19 191723.png “1”)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-19%20191723.png"
+                     
+                ></p>
 <p>点击蓝色链接 <a class="link"   target="_blank" rel="noopener" href="http://127.0.0.1:8000/" >http://127.0.0.1:8000/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 跳转</p>
-<p>![1](X:&#x2F;MineProg&#x2F;CancerCellRecognition&#x2F;note&#x2F;images&#x2F;屏幕截图 2024-12-19 192255.png “1”)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-19%20192255.png"
+                     
+                ></p>
 <p>打开设置（settings）-&gt;项目（project）安装解释器</p>
-<p>![1](X:&#x2F;MineProg&#x2F;CancerCellRecognition&#x2F;note&#x2F;images&#x2F;屏幕截图 2024-12-19 193037.png “1”)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-19%20193037.png"
+                     
+                ></p>
 <p>应有上述安装包（最重要的时 Django 与 PyMySql）</p>
 <p>点击确定（ok）退出</p>
 <h4 id="Django配置MySql数据库"><a href="#Django配置MySql数据库" class="headerlink" title="Django配置MySql数据库"></a>Django配置MySql数据库</h4><p>注意要先安装好PyMySql解释器</p>
@@ -561,7 +575,12 @@
 <div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">        <span class="string">&#x27;ENGINE&#x27;</span>: <span class="string">&#x27;django.db.backends.mysql&#x27;</span>, <span class="comment">#数据库的类型</span></span><br><span class="line">        <span class="string">&#x27;NAME&#x27;</span>: <span class="string">&#x27;dbdemo1219&#x27;</span>, <span class="comment">#所使用数据库的名字 这里我新建的</span></span><br><span class="line">        <span class="string">&#x27;USER&#x27;</span>: <span class="string">&#x27;root&#x27;</span>, <span class="comment">#数据库服务器用户</span></span><br><span class="line">        <span class="string">&#x27;PASSWORD&#x27;</span>: <span class="string">&#x27;**********&#x27;</span>, <span class="comment">#密码 你自己的mysql root用户密码!!!</span></span><br><span class="line">        <span class="string">&#x27;HOST&#x27;</span>: <span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="comment">#主机</span></span><br><span class="line">        <span class="string">&#x27;PORT&#x27;</span>: <span class="string">&#x27;3306&#x27;</span>, <span class="comment">#端口</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>如下图所示</p>
-<p>![1](X:&#x2F;MineProg&#x2F;CancerCellRecognition&#x2F;note&#x2F;images&#x2F;屏幕截图 2024-12-19 194846.png “1”)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-19%20194846.png"
+                     
+                ></p>
 <p>这里出现报错，报错信息最后是 ModuleNotFoundError: No module named ‘pymysql’</p>
 <p>查询方知不能只添加解释器，我的电脑上安装了Django但是没有PyMySql</p>
 <p>遂执行cmd命令</p>
@@ -574,7 +593,12 @@
 
 <p>执行出好几条“OK”</p>
 <p>Navicat打开找出前边新建的数据库刷新发现建好了表</p>
-<p>![1](X:&#x2F;MineProg&#x2F;CancerCellRecognition&#x2F;note&#x2F;images&#x2F;屏幕截图 2024-12-19 204107.png “1”)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-19%20204107.png"
+                     
+                ></p>
 <p>此时重新启动服务器 terminal</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure></div>
 
@@ -582,10 +606,125 @@
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8000/admin/login</span><br></pre></td></tr></table></figure></div>
 
 <p>得到登录界面</p>
-<p>![1](X:&#x2F;MineProg&#x2F;CancerCellRecognition&#x2F;note&#x2F;images&#x2F;屏幕截图 2024-12-19 204712.png “1”)</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-19%20204712.png"
+                     
+                ></p>
 <p>本节目的在这里</p>
 <p><em><strong>但是我好像没有进行这步的配置就已经可以看到这个界面了，配置了个寂寞，可能是Django或者PyMySql更新了导致的，说不准</strong></em></p>
+<p>&#x3D;&#x3D;&#x3D;&#x3D;2024.12.20</p>
+<h4 id="Admin用户创建"><a href="#Admin用户创建" class="headerlink" title="Admin用户创建"></a>Admin用户创建</h4><p>Ctrl+C断开服务器，终端输入：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure></div>
+
+<p>创建SuperUser，按提示输入用户名（Username）邮箱（EmailAddress合适格式即可）密码（Password）</p>
+<p>！！！此处设置（SupremeGuan  <a class="link"   href="mailto:&#x31;&#x37;&#56;&#57;&#x35;&#52;&#x38;&#49;&#x31;&#x30;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;" >&#x31;&#x37;&#56;&#57;&#x35;&#52;&#x38;&#49;&#x31;&#x30;&#64;&#113;&#113;&#46;&#x63;&#x6f;&#x6d;<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>  123456） 小写y确定</p>
+<p>python manage.py runserver启动服务器</p>
+<p>打开网站127.0.0.1:8000&#x2F;admin&#x2F;，输入相应用户名和密码</p>
+<p>成功登入Django内置后台管理界面！</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20145044.png"
+                     
+                ></p>
+<h4 id="显示html界面"><a href="#显示html界面" class="headerlink" title="显示html界面"></a>显示html界面</h4><p>断开服务器连接，终端输入</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py startapp polls</span><br></pre></td></tr></table></figure></div>
+
+<p>运行，文件目录里生成了polls文件夹</p>
+<p>下一步我们的目标是在127.0.0.1:8000&#x2F;polls&#x2F;访问到我们的指定页面</p>
+<h5 id="配置路由"><a href="#配置路由" class="headerlink" title="配置路由"></a>配置路由</h5><p>polls文件夹里新建urls.py作子路由</p>
+<p>打开路径主文件夹（Demo1219_2）-&gt; urls.py，按如下形式进行修改</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path, include <span class="comment"># 这里要加上 include</span></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;admin/&#x27;</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">&#x27;polls/&#x27;</span>, include(<span class="string">&#x27;polls.urls&#x27;</span>)), <span class="comment"># 添加一个路由</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure></div>
+
+<p>配置子路由polls -&gt; urls.py ，形式如下</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> views</span><br><span class="line">urlpatterns = [</span><br><span class="line"></span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>,views.toLogin_view)</span><br><span class="line">]</span><br></pre></td></tr></table></figure></div>
+
+<p>配置子路由polls -&gt; views.py ，形式如下</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render</span><br><span class="line"></span><br><span class="line"><span class="comment"># Create your views here.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">toLogin_view</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">return</span> render(request,<span class="string">&#x27;login.html&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>访问时会按照  Demo1219_2-&gt; urls.py   &#x3D;&#x3D;》 polls -&gt; urls.py &#x3D;&#x3D;》 polls -&gt; views.py  &#x3D;&#x3D;》最后打开 login.html 页面</p>
+<p>在文件夹polls目录下新建软件包 templates </p>
+<p>打开 Demo1219_2-&gt; settings.py 找到 TEMPLATES 模块（54行左右），修改第二行的路径为：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;DIRS&#x27;</span>: [os.path.join(BASE_DIR,<span class="string">&#x27;templates&#x27;</span>)],</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>问题在于Django 3.1就没有引入os模块了，拼接路径需要用pathlib模块</strong>（感谢弹幕老哥提醒</p>
+<p>我在这里先通过设置安装了pathlib解释器，然后操作如下</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pathlib <span class="keyword">import</span> Path</span><br><span class="line"></span><br><span class="line"><span class="comment"># 假设 BASE_DIR 是你的基础目录</span></span><br><span class="line">BASE_DIR = Path(<span class="string">&#x27;/your/base/directory&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 / 操作符来连接路径</span></span><br><span class="line">templates_dir = BASE_DIR / <span class="string">&#x27;templates&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 以上是自行添加的部分</span></span><br><span class="line"></span><br><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.template.backends.django.DjangoTemplates&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;DIRS&#x27;</span>: <span class="string">&#x27;templates_dir&#x27;</span>, <span class="comment">#需修改</span></span><br><span class="line">        <span class="string">&#x27;APP_DIRS&#x27;</span>: <span class="literal">True</span>,</span><br><span class="line">        <span class="string">&#x27;OPTIONS&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;context_processors&#x27;</span>: [</span><br><span class="line">                <span class="string">&#x27;django.template.context_processors.debug&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;django.template.context_processors.request&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;django.contrib.auth.context_processors.auth&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;django.contrib.messages.context_processors.messages&#x27;</span>,</span><br><span class="line">            ],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></div>
+
+<p>看看是否可行，不可行回来找其他方案</p>
+<p><strong>参考文献：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/liaoqingjian/article/details/143662285" >https://blog.csdn.net/liaoqingjian/article/details/143662285<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></strong></p>
+<p>templates 目录下新建 login.html，将我的页面贴过来。</p>
+<p>打开 Demo1219_2-&gt; settings.py ， 找到 INSTALLED_APPS 模块加以修改（33行左右）</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">&#x27;django.contrib.admin&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.contenttypes&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.sessions&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.messages&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.staticfiles&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;polls&#x27;</span>, <span class="comment"># 这里需要添加的一行</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure></div>
+
+<p>连接服务器，打开网站 127.0.0.1:8000&#x2F;polls&#x2F; ，看到你的html网页即是连接成功</p>
+<p>由于 PyCharm Community Edition 不支持 css 文件，一怒之下改用最爱的 VSCode!!!</p>
+<p>但是此时无法载入同级目录的 css 文件</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20213253.png"
+                     
+                ></p>
+<p>如图所示，在 polls 目录下创建 static 文件夹并生成上述四个文件，在 css 文件夹里放入 login_styles.css ，并进行配置。</p>
+<p>在 settings.py 中的 TEMPLATES&#x2F;OPTIONS 添加</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;builtins&#x27;</span>:[<span class="string">&#x27;django.templatetags.static&#x27;</span>],</span><br></pre></td></tr></table></figure></div>
+
+<p>形式如下：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;BACKEND&#x27;</span>: <span class="string">&#x27;django.template.backends.django.DjangoTemplates&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;DIRS&#x27;</span>: <span class="string">&#x27;templates_dir&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;APP_DIRS&#x27;</span>: <span class="literal">True</span>,</span><br><span class="line">        <span class="string">&#x27;OPTIONS&#x27;</span>: &#123;</span><br><span class="line">            <span class="string">&#x27;context_processors&#x27;</span>: [</span><br><span class="line">                <span class="string">&#x27;django.template.context_processors.debug&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;django.template.context_processors.request&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;django.contrib.auth.context_processors.auth&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;django.contrib.messages.context_processors.messages&#x27;</span>,</span><br><span class="line">            ],</span><br><span class="line">            <span class="string">&#x27;builtins&#x27;</span>:[<span class="string">&#x27;django.templatetags.static&#x27;</span>], <span class="comment"># 添加的部分</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure></div>
+
+<p>若没有报错，重新连接服务器，打开网站 127.0.0.1:8000&#x2F;polls&#x2F; ，即可得到具有 css 格式的页面。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20214308.png"
+                     
+                ></p>
+<p>参考文献：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/Hjh1906008151/article/details/125477399" >从零开始的Django框架入门到实战教程(内含实战实例) - 01 创建项目与app、加入静态文件、模板语法介绍（学习笔记）_django教程-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h4 id="使用-get-和-post-做登录功能"><a href="#使用-get-和-post-做登录功能" class="headerlink" title="使用 get 和 post 做登录功能"></a>使用 get 和 post 做登录功能</h4><h5 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h5><p>找到登陆界面的 form 标签处，添加内容：</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/polls/index&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>打开 polls -&gt; views.py 中加入：</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">Login_view</span>(<span class="params">request</span>):</span><br><span class="line">    u = request.GET.get(<span class="string">&quot;register-email&quot;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    p = request.GET.get(<span class="string">&quot;register-password&quot;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> u <span class="keyword">and</span> p:</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&quot;登陆成功！&quot;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> HttpResponse(<span class="string">&quot;登陆失败！&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>这里的 GET 对应 html 里 input 标签里的 name&#x3D;””</p>
+<div class="code-container" data-rel="Html"><figure class="iseeu highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">id</span>=<span class="string">&quot;register-form&quot;</span> <span class="attr">action</span>=<span class="string">&quot;/polls/index&quot;</span> <span class="attr">method</span>=<span class="string">&quot;get&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;register-email&quot;</span>&gt;</span>电子邮箱<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;email&quot;</span> <span class="attr">id</span>=<span class="string">&quot;register-email&quot;</span> <span class="attr">name</span>=<span class="string">&quot;register-email&quot;</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;form-group&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;register-password&quot;</span>&gt;</span>密码<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;password&quot;</span> <span class="attr">name</span>=<span class="string">&quot;register-password&quot;</span> <span class="attr">required</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>打开路由 polls -&gt; urls.py 里的 urlpatterns 模块里加入</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">path(<span class="string">&#x27;index/&#x27;</span>,views.Login_view)</span><br></pre></td></tr></table></figure></div>
+
+<p>连接服务器报错，编译器不认识 HttpResponse</p>
+<p>在 polls -&gt; views.py 上面添加</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> HttpResponse</span><br></pre></td></tr></table></figure></div>
+
+<p>参考文献：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42263536/article/details/128706642" >https://blog.csdn.net/weixin_42263536/article/details/128706642<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>修改 polls -&gt; views.py 12行左右为</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> u==<span class="string">&quot;1789548110@qq.com&quot;</span> <span class="keyword">and</span> p==<span class="string">&quot;123456&quot;</span>:</span><br></pre></td></tr></table></figure></div>
+
+<p>可以实现指定用户登录。</p>
+<h5 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h5><p>修改 polls -&gt; views.py 中的 GET 改为 POST</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">u = request.POST.get(<span class="string">&quot;register-email&quot;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">p = request.POST.get(<span class="string">&quot;register-password&quot;</span>,<span class="string">&#x27;&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>并在 login.html 里 form 标签之下添加</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% csrf_token %&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20222435.png"
+                     
+                ></p>
+<p>单纯改为 POST 传值不可行，添加这段代码的目的是在下图位置进行操作，有利于保证安全性</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/post_images/%E5%9F%BA%E4%BA%8EPyCharm-Django-MySql%E6%90%AD%E5%BB%BA%E7%AE%80%E6%98%93Web%E7%BD%91%E7%AB%99/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202024-12-20%20222647.png"
+                     
+                ></p>
 <p><strong>未完待续……</strong></p>
+<p>注：本篇为B站视频 <a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1wT4y1j71A/" >https://www.bilibili.com/video/BV1wT4y1j71A/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 的操作笔记以及个人配置过程中的遇到的问题集锦，如有侵权请联系qq3488643420删除</p>
 
 		</div>
 
@@ -600,7 +739,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-12-19 22:35:46
+                    :</strong> 2024-12-20 22:31:43
             </li>
         
         <li>

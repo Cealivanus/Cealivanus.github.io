@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-12-24T05:58:36.000Z">
-<meta property="article:modified_time" content="2024-12-24T13:07:25.030Z">
+<meta property="article:modified_time" content="2025-03-10T03:50:17.679Z">
 <meta property="article:author" content="Cealivanus Kwan">
 <meta property="article:tag" content="Qt">
 <meta name="twitter:card" content="summary">
@@ -400,7 +400,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
         <div class="label text-third-text-color text-sm">标签</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -408,7 +408,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">17</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">18</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -459,8 +459,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-24 21:07:25</span>
-            <span class="mobile">2024-12-24 21:07:25</span>
+            <span class="desktop">2025-03-10 11:50:17</span>
+            <span class="mobile">2025-03-10 11:50:17</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -514,8 +514,71 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<p>说过的话封建快攻合肥路可以</p>
-<p>右栏 属性编辑器 windowTitle 表示页面标题</p>
+			<p>Qt 是一个跨平台的 C++ 框架，广泛用于开发图形用户界面（GUI）应用程序。以下是 Qt 入门的基本知识：</p>
+<h3 id="1-Qt-简介"><a href="#1-Qt-简介" class="headerlink" title="1. Qt 简介"></a>1. <strong>Qt 简介</strong></h3><ul>
+<li><strong>跨平台</strong>：支持 Windows、macOS、Linux、Android、iOS 等。</li>
+<li><strong>模块化</strong>：包含 GUI、网络、数据库、多媒体等模块。</li>
+<li><strong>信号与槽机制</strong>：用于对象间的通信。</li>
+</ul>
+<h3 id="2-安装-Qt"><a href="#2-安装-Qt" class="headerlink" title="2. 安装 Qt"></a>2. <strong>安装 Qt</strong></h3><ul>
+<li><strong>下载 Qt</strong>：从 <a class="link"   target="_blank" rel="noopener" href="https://www.qt.io/download" >Qt 官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 获取安装包。</li>
+<li><strong>选择组件</strong>：安装时选择所需的 Qt 版本和工具，如 Qt Creator。</li>
+<li><strong>配置环境</strong>：确保编译器（如 GCC、MSVC）和调试器已安装并配置。</li>
+</ul>
+<h3 id="3-Qt-Creator"><a href="#3-Qt-Creator" class="headerlink" title="3. Qt Creator"></a>3. <strong>Qt Creator</strong></h3><ul>
+<li><strong>集成开发环境（IDE）</strong>：用于编写、调试和构建 Qt 项目。</li>
+<li><strong>项目管理</strong>：支持创建和管理 Qt 项目。</li>
+<li><strong>调试工具</strong>：内置调试器，支持断点和变量检查。</li>
+</ul>
+<h3 id="4-基本概念"><a href="#4-基本概念" class="headerlink" title="4. 基本概念"></a>4. <strong>基本概念</strong></h3><ul>
+<li><strong>QObject</strong>：所有 Qt 对象的基类，支持信号与槽机制。</li>
+<li><strong>QWidget</strong>：所有 GUI 组件的基类。</li>
+<li><strong>信号与槽</strong>：用于对象间通信，信号在事件发生时发出，槽是响应信号的函数。</li>
+</ul>
+<h3 id="5-创建第一个-Qt-程序"><a href="#5-创建第一个-Qt-程序" class="headerlink" title="5. 创建第一个 Qt 程序"></a>5. <strong>创建第一个 Qt 程序</strong></h3><ol>
+<li><strong>新建项目</strong>：在 Qt Creator 中选择 “File” -&gt; “New File or Project”，然后选择 “Qt Widgets Application”。</li>
+<li><strong>设计界面</strong>：使用 Qt Designer 拖放组件设计界面。</li>
+<li><strong>编写代码</strong>：在 <code>main.cpp</code> 和 <code>mainwindow.cpp</code> 中编写逻辑代码。</li>
+<li><strong>构建与运行</strong>：点击 “Build” -&gt; “Run” 编译并运行程序。</li>
+</ol>
+<h3 id="6-常用组件"><a href="#6-常用组件" class="headerlink" title="6. 常用组件"></a>6. <strong>常用组件</strong></h3><ul>
+<li><strong>QPushButton</strong>：按钮。</li>
+<li><strong>QLabel</strong>：文本标签。</li>
+<li><strong>QLineEdit</strong>：单行文本输入框。</li>
+<li><strong>QTextEdit</strong>：多行文本输入框。</li>
+<li><strong>QComboBox</strong>：下拉列表框。</li>
+<li><strong>QCheckBox</strong>：复选框。</li>
+<li><strong>QRadioButton</strong>：单选按钮。</li>
+</ul>
+<h3 id="7-布局管理"><a href="#7-布局管理" class="headerlink" title="7. 布局管理"></a>7. <strong>布局管理</strong></h3><ul>
+<li><strong>QHBoxLayout</strong>：水平布局。</li>
+<li><strong>QVBoxLayout</strong>：垂直布局。</li>
+<li><strong>QGridLayout</strong>：网格布局。</li>
+<li><strong>QFormLayout</strong>：表单布局。</li>
+</ul>
+<h3 id="8-信号与槽"><a href="#8-信号与槽" class="headerlink" title="8. 信号与槽"></a>8. <strong>信号与槽</strong></h3><ul>
+<li><strong>连接信号与槽</strong>：使用 <code>connect</code> 函数。<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">connect</span>(sender, &amp;Sender::signal, receiver, &amp;Receiver::slot);</span><br></pre></td></tr></table></figure></div></li>
+<li><strong>自定义信号与槽</strong>：在类中声明信号和槽，使用 <code>signals</code> 和 <code>slots</code> 关键字。</li>
+</ul>
+<h3 id="9-资源文件"><a href="#9-资源文件" class="headerlink" title="9. 资源文件"></a>9. <strong>资源文件</strong></h3><ul>
+<li><strong>qrc 文件</strong>：用于管理应用程序资源，如图片、图标。</li>
+<li><strong>使用资源</strong>：在代码中通过 <code>:/</code> 前缀访问资源。</li>
+</ul>
+<h3 id="10-调试与发布"><a href="#10-调试与发布" class="headerlink" title="10. 调试与发布"></a>10. <strong>调试与发布</strong></h3><ul>
+<li><strong>调试</strong>：使用 Qt Creator 的调试工具设置断点、检查变量。</li>
+<li><strong>发布</strong>：使用 <code>windeployqt</code>（Windows）或 <code>macdeployqt</code>（macOS）打包应用程序。</li>
+</ul>
+<h3 id="11-学习资源"><a href="#11-学习资源" class="headerlink" title="11. 学习资源"></a>11. <strong>学习资源</strong></h3><ul>
+<li><strong>官方文档</strong>：<a class="link"   target="_blank" rel="noopener" href="https://doc.qt.io/" >Qt Documentation<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li><strong>教程</strong>：在线教程和书籍，如《C++ GUI Programming with Qt 4》。</li>
+<li><strong>社区</strong>：Qt 论坛和 Stack Overflow。</li>
+</ul>
+<h3 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h3><p>以下是一个简单的 Qt 程序示例，显示一个窗口和一个按钮：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QApplication&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QPushButton&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;QWidget&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">QApplication <span class="title">app</span><span class="params">(argc, argv)</span></span>;</span><br><span class="line"></span><br><span class="line">    QWidget window;</span><br><span class="line">    window.<span class="built_in">setWindowTitle</span>(<span class="string">&quot;Hello Qt&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function">QPushButton <span class="title">button</span><span class="params">(<span class="string">&quot;Click Me&quot;</span>, &amp;window)</span></span>;</span><br><span class="line">    button.<span class="built_in">setGeometry</span>(<span class="number">50</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">    window.<span class="built_in">show</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> app.<span class="built_in">exec</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="个人笔记："><a href="#个人笔记：" class="headerlink" title="个人笔记："></a>个人笔记：</h3><p>右栏 属性编辑器 windowTitle 表示页面标题</p>
 <p>左栏：LineEdit 输入框</p>
 <p>​			Button 按键</p>
 <p>​            label 文字标签</p>
@@ -534,7 +597,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-12-24 21:07:25
+                    :</strong> 2025-03-10 11:50:17
             </li>
         
         <li>
@@ -609,7 +672,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">Qt入门笔记</div>
-		
+		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Qt-%E7%AE%80%E4%BB%8B"><span class="nav-text">1. Qt 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85-Qt"><span class="nav-text">2. 安装 Qt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Qt-Creator"><span class="nav-text">3. Qt Creator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">4. 基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA-Qt-%E7%A8%8B%E5%BA%8F"><span class="nav-text">5. 创建第一个 Qt 程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%B8%B8%E7%94%A8%E7%BB%84%E4%BB%B6"><span class="nav-text">6. 常用组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86"><span class="nav-text">7. 布局管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BF%A1%E5%8F%B7%E4%B8%8E%E6%A7%BD"><span class="nav-text">8. 信号与槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6"><span class="nav-text">9. 资源文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E8%B0%83%E8%AF%95%E4%B8%8E%E5%8F%91%E5%B8%83"><span class="nav-text">10. 调试与发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-text">11. 学习资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-text">示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%EF%BC%9A"><span class="nav-text">个人笔记：</span></a></li></ol>
 
 	</div>
 </div>
@@ -636,7 +699,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 17 篇文章
+                        共撰写了 18 篇文章
                     </span>
                     
                 </p>

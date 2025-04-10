@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-03-29T09:09:39.000Z">
-<meta property="article:modified_time" content="2025-03-29T13:01:48.871Z">
+<meta property="article:modified_time" content="2025-04-05T10:27:38.431Z">
 <meta property="article:author" content="Cealivanus Kwan">
 <meta property="article:tag" content="python">
 <meta property="article:tag" content="crawler">
@@ -409,7 +409,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">19</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -460,8 +460,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-03-29 21:01:48</span>
-            <span class="mobile">2025-03-29 21:01:48</span>
+            <span class="desktop">2025-04-05 18:27:38</span>
+            <span class="mobile">2025-04-05 18:27:38</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -613,6 +613,155 @@
                       alt="image-20250329210042114"
                 ></p>
 <p>控制台打印只有一长行不便阅读，遂保存到文件中。</p>
+<p><strong>程序最后不要忘记加上</strong></p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resp.close() <span class="comment"># 关掉resp</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="2-数据解析"><a href="#2-数据解析" class="headerlink" title="2 数据解析"></a>2 数据解析</h3><p>从整个网页冗杂的信息中提取我们需要的信息。</p>
+<p>三种数据解析方式： re bs4 xpath</p>
+<h4 id="2-1-re解析"><a href="#2-1-re解析" class="headerlink" title="2.1 re解析"></a>2.1 re解析</h4><p>Regular Expression 正则表达式</p>
+<p>正则的语法：使用元字符进行排列组合用来匹配字符串</p>
+<p>元字符：具有固定含义的特殊字符</p>
+<p>常用元字符：</p>
+<table>
+<thead>
+<tr>
+<th align="left">代码</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.</td>
+<td align="left">匹配除换行符以外的任意字符</td>
+</tr>
+<tr>
+<td align="left">\w</td>
+<td align="left">匹配字母或数字或下划线或汉字</td>
+</tr>
+<tr>
+<td align="left">\s</td>
+<td align="left">匹配任意的空白符</td>
+</tr>
+<tr>
+<td align="left">\d</td>
+<td align="left">匹配数字</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">匹配单词的开始或结束</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td align="left">匹配一个换行符</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td align="left">匹配一个制表符</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">匹配字符串的开始（在集合字符里[^a]表示非（不匹配）的意思</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配字符串的结束</td>
+</tr>
+<tr>
+<td align="left">\W</td>
+<td align="left">匹配非字母或数字或下划线或汉字  <strong>大写字母表示反义词</strong></td>
+</tr>
+<tr>
+<td align="left">\D</td>
+<td align="left">匹配非数字</td>
+</tr>
+<tr>
+<td align="left">\S</td>
+<td align="left">匹配非空白符</td>
+</tr>
+<tr>
+<td align="left">a|b</td>
+<td align="left">匹配字符a或字符b</td>
+</tr>
+<tr>
+<td align="left">()</td>
+<td align="left">匹配括号内的表达式，也表示一个组</td>
+</tr>
+<tr>
+<td align="left">[]</td>
+<td align="left">表示字符组（元组）</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<p>常用反义字符</p>
+<table>
+<thead>
+<tr>
+<th align="left">代码&#x2F;语法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\W</td>
+<td align="left">匹配任意不是字母，数字，下划线，汉字的字符</td>
+</tr>
+<tr>
+<td align="left">\S</td>
+<td align="left">匹配任意不是空白符的字符</td>
+</tr>
+<tr>
+<td align="left">\D</td>
+<td align="left">匹配任意非数字的字符</td>
+</tr>
+<tr>
+<td align="left">\B</td>
+<td align="left">匹配不是单词开头或结束的位置</td>
+</tr>
+<tr>
+<td align="left">[^x]</td>
+<td align="left">匹配除了x以外的任意字符</td>
+</tr>
+<tr>
+<td align="left">[^aeiou]</td>
+<td align="left">匹配除了aeiou这几个字母以外的任意字符</td>
+</tr>
+</tbody></table>
+<p>常用限定符</p>
+<table>
+<thead>
+<tr>
+<th align="left">代码&#x2F;语法</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">*</td>
+<td align="left">重复零次或更多次</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">重复一次或更多次</td>
+</tr>
+<tr>
+<td align="left">?</td>
+<td align="left">重复零次或一次</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td align="left">重复n次</td>
+</tr>
+<tr>
+<td align="left">{n,}</td>
+<td align="left">重复n次或更多次</td>
+</tr>
+<tr>
+<td align="left">{n,m}</td>
+<td align="left">重复n到m次</td>
+</tr>
+</tbody></table>
 
 		</div>
 
@@ -627,7 +776,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-03-29 21:01:48
+                    :</strong> 2025-04-05 18:27:38
             </li>
         
         <li>
@@ -668,6 +817,18 @@
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/04/10/Django%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E6%8C%87%E5%8D%97/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Django项目迁移指南</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
+			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
 				<a class="next" rel="next" href="/2025/03/10/Cpolar%E5%AE%9E%E7%8E%B0%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/">
@@ -694,7 +855,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">Python Crawler</div>
-		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5"><span class="nav-text">简单爬取网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-%E8%AF%B7%E6%B1%82%E5%85%A8%E8%BF%87%E7%A8%8B"><span class="nav-text">Web 请求全过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-%E5%8D%8F%E8%AE%AE"><span class="nav-text">HTTP 协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requests-%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="nav-text">Requests 模块介绍</span></a></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5"><span class="nav-text">简单爬取网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-%E8%AF%B7%E6%B1%82%E5%85%A8%E8%BF%87%E7%A8%8B"><span class="nav-text">Web 请求全过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP-%E5%8D%8F%E8%AE%AE"><span class="nav-text">HTTP 协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Requests-%E6%A8%A1%E5%9D%97%E4%BB%8B%E7%BB%8D"><span class="nav-text">Requests 模块介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90"><span class="nav-text">2 数据解析</span></a></li></ol>
 
 	</div>
 </div>
@@ -721,7 +882,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 19 篇文章
+                        共撰写了 20 篇文章
                     </span>
                     
                 </p>

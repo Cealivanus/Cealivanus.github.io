@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2024-12-19T12:55:12.000Z">
-<meta property="article:modified_time" content="2024-12-19T13:20:06.873Z">
+<meta property="article:modified_time" content="2025-04-13T11:03:47.251Z">
 <meta property="article:author" content="Cealivanus Kwan">
 <meta property="article:tag" content="MySql">
 <meta name="twitter:card" content="summary">
@@ -459,8 +459,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-12-19 21:20:06</span>
-            <span class="mobile">2024-12-19 21:20:06</span>
+            <span class="desktop">2025-04-13 19:03:47</span>
+            <span class="mobile">2025-04-13 19:03:47</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -520,38 +520,41 @@
 
 <p>回车提醒你输入设定的root用户密码，密码正确成功进入</p>
 <h5 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h5><p>查看数据库：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> databases;</span><br></pre></td></tr></table></figure></div>
 
 <p>不要忘记后面加“;”</p>
 <p>创建数据库：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database [dbname];</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database [dbname];</span><br></pre></td></tr></table></figure></div>
 
 <p>选择当前数据库：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use [dbname];</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use [dbname];</span><br></pre></td></tr></table></figure></div>
 
 <p>查看当前选择了哪一个数据库:</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select database();</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> database();</span><br></pre></td></tr></table></figure></div>
 
 <p>删除数据库：<strong>危险操作</strong></p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop [if exists] database [dbname]</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> [if <span class="keyword">exists</span>] database [dbname]</span><br></pre></td></tr></table></figure></div>
 
 <p>查看警告信息：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show warnings;</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> warnings;</span><br></pre></td></tr></table></figure></div>
 
 <p>退出：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit/exit;</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit<span class="operator">/</span>exit;</span><br></pre></td></tr></table></figure></div>
 
 <h5 id="表操作"><a href="#表操作" class="headerlink" title="表操作"></a>表操作</h5><p>查看表：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables；</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> tables；</span><br></pre></td></tr></table></figure></div>
 
 <p>创建表：Create table 表名(列名 数据类型，列名 数据类型)；</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table [tablename](id int, name varchar(20));</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> [tablename](id <span class="type">int</span>, name <span class="type">varchar</span>(<span class="number">20</span>));</span><br></pre></td></tr></table></figure></div>
 
 <p>查看表结构：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc [tablename];</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> [tablename];</span><br></pre></td></tr></table></figure></div>
 
-<p>删除表：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop [tablename];</span><br></pre></td></tr></table></figure></div>
+<p>删除表（包括表结构）：</p>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> [tablename];</span><br></pre></td></tr></table></figure></div>
+
+<p>删除表（只删除内容）：</p>
+<div class="code-container" data-rel="Sql"><figure class="iseeu highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#删除部分数据</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tb_name <span class="keyword">where</span> clause;</span><br><span class="line"></span><br><span class="line">#清空表，仅删除数据、保留表结构，同时也不释放表空间</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tb_name;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
 
@@ -570,7 +573,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-12-19 21:20:06
+                    :</strong> 2025-04-13 19:03:47
             </li>
         
         <li>
